@@ -4,6 +4,20 @@
 // the imtables repo.
 
 .im-table {
+    color: @body-foreground-color;
+    background-color: #fff;
+
+    .btn {
+        margin: 0;
+        min-width: 0;
+        color: @body-foreground-color;
+    }
+
+    .dropdown-toggle {
+        color: @body-foreground-color;
+        background-color: #fff;
+    }
+
     .btn-group {
         margin: 0;
 
@@ -14,7 +28,6 @@
 
     .column-summary-toolbar .btn {
         .btn-raised-override;
-        margin: 0;
     }
 
     .no-histogram {
@@ -31,6 +44,7 @@
 
     .filter-view {
         .btn-primary {
+            padding: 0;
             .btn-raised-override;
         }
 
