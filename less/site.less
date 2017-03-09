@@ -33,8 +33,17 @@ body {
     background: @body-background-color;
     color: @body-foreground-color;
     margin-top: 50px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    .font-style;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input {
+    .font-style
 }
 
 .ani {
@@ -221,10 +230,6 @@ footer {
     background: rgba(0, 0, 0, 0.1);
 }
 
-.search {
-    margin-top: 2px;
-}
-
 .small {
     font-size: 0.7em;
     background: white;
@@ -387,53 +392,5 @@ label {
 
     ul {
         display: inline;
-    }
-}
-
-button {
-    border-radius: @border-radius;
-    margin-top: 1px;
-    height: @spacer*1.5;
-    padding: @spacer/4;
-    min-width: 10em;
-    font-family: Roboto, Helvetica, arial, sans-serif;
-    font-weight: 500;
-    text-transform: uppercase;
-    float: right;
-    line-height: 0.3em;
-    min-height: 2.6em;
-    vertical-align: middle;
-    background: @cta-color;
-    color: @cta-color-text;
-    border: 0;
-
-    &:hover {
-        transition: all 0.4s;
-        background: lighten(@cta-color,5%);
-        box-shadow: 3px 3px 4px rgba(0,0,0,0.3);
-    }
-
-    &:active {
-        box-shadow: 0 0 0 0;
-        background: darken(@cta-color,5%);
-        transition: all 0.2s;
-    }
-
-    &.btn-raised {
-        box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        border: 0;
-        text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
-    }
-}
-
-.btn-warning {
-    background-color: transparent;
-    color: @warning-color;
-    border: 0;
-    text-shadow: none;
-    &:hover {background-color:rgba(0,0,0,0.05);
-      color: @warning-color;
-      box-shadow:none;
-      &:disabled,&.disabled{background:transparent;}
     }
 }

@@ -1,7 +1,6 @@
 @import "variables";
 @import "../resources/public/vendor/bootstrap/less/variables";
 
-
 select.form-control {
     border: 1px solid #d6d6d6;
 }
@@ -9,6 +8,8 @@ select.form-control {
 .panel {
     box-shadow: none;
 }
+
+label {font-weight:400;}
 
 .popover.fade.bottom.in {
     background-color: @highlight-color;
@@ -148,22 +149,26 @@ input.form-control:focus {
     background-image: none;
 }
 //use this as a mixin to override default .btn styling (like for imtables).
+
 .btn-raised-override {
-  &.btn.btn-primary,
-  &.btn.btn-primary:not(.btn-link) {
-      background: @highlight-color;
-      color: @cta-color-text;
+    &.btn.btn-primary,
+    &.btn.btn-primary:not(.btn-link) {
+        background: @highlight-color;
+        color: @cta-color-text;
 
-      &:focus,
-      &:hover {
-          background: lighten(@highlight-color,10%);
-          color: @cta-color-text;
-      }
-      &:active {box-shadow:0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36)}
-  }
+        &:focus,
+        &:hover {
+            background: lighten(@highlight-color,10%);
+            color: @cta-color-text;
+        }
 
+        &:active {
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36);
+        }
+    }
 }
 //coloured bg, light text
+
 .btn-group.open > .dropdown-toggle.btn.btn-primary,
 .btn.btn-primary.btn-raised,
 .btn.btn-primary.btn-raised:not(.btn-link) {
@@ -176,20 +181,28 @@ input.form-control:focus {
         color: @cta-color-text;
     }
 }
+.btn-group {margin: @spacer/2}
+.dropdown-menu {
+    li a {
+        &:hover {
+            color: @highlight-color;
+        }
 
-.dropdown-menu li a {
-    &:hover {
-        color: @highlight-color;
-    }
-
-    &.active {
-        background: @highlight-color;
-        color: @cta-color-text;
+        &.active {
+            background: @highlight-color;
+            color: @cta-color-text;
+        }
     }
 }
+
+
 //pale bg, coloured text
 .btn.btn-primary,
-.btn.btn-primary:not(.btn-link) {
+.btn.btn-primary:not(.btn-link), .dropdown-toggle {
+    background-color:transparent;
+    border:transparent;
+    text-shadow:none;
+    box-shadow:none;
     color: @highlight-color;
 
     &:active,
@@ -198,4 +211,59 @@ input.form-control:focus {
         background: darken(@body-background-color,3%);
         color: darken(@highlight-color,10%);
     }
+}
+
+button  {
+    border-radius: @border-radius;
+    margin-top: 1px;
+    height: @spacer*1.5;
+    padding: @spacer/4;
+    min-width: 10em;
+    font-family: Roboto, Helvetica, arial, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    float: right;
+    line-height: 0.3em;
+    min-height: 2.6em;
+    vertical-align: middle;
+    background: @cta-color;
+    color: @cta-color-text;
+    border: 0;
+
+    &:hover {
+        transition: all 0.4s;
+        background: lighten(@cta-color,5%);
+        box-shadow: 3px 3px 4px rgba(0,0,0,0.3);
+    }
+
+    &:active {
+        box-shadow: 0 0 0 0;
+        background: darken(@cta-color,5%);
+        transition: all 0.2s;
+    }
+
+    &.btn-raised {
+        box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        border: 0;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    }
+}
+
+.btn-warning, .btn-default {
+  .transitions;
+    background-color: transparent;
+    border: 0;
+    text-shadow: none;
+    &:hover {
+      .transitions;
+      background-color:rgba(0,0,0,0.05);
+      box-shadow:none;
+      &:disabled,&.disabled{background:transparent;}
+    }
+}
+
+.btn-warning {    color: @warning-color;
+    &:hover {
+      color: @warning-color;
+}
 }

@@ -2,6 +2,7 @@
 
 .navbar,
 .navbar.navbar-default {
+  .navbar-right {display:flex}
     li {
         flex-grow: 1;
         justify-content: center;
@@ -11,6 +12,7 @@
     margin-bottom: 0;
     border-width: 0;
     border-radius: 0;
+    min-height: 2em;
 
     .container-fluid,
     .navbar-header {
@@ -32,7 +34,6 @@
 
     .navbar-brand {
         color: #fff;
-        font-style: bold;
         -webkit-clip-path: polygon(0 0, 100% 0, 93% 100%, 0 100%);
         clip-path: polygon(0 0, 100% 0, 93% 100%, 0 100%);
         .transitions;
@@ -130,7 +131,11 @@
     .active a {
         background-color: lighten(@navbar-color,5%);
         .transitions;
-        &:hover {background-color:lighten(@navbar-color,15%);color:@navbar-text-color}
+
+        &:hover {
+            background-color: lighten(@navbar-color,5%);
+            color: @navbar-text-color
+        }
     }
 
     .navbar-nav {
@@ -138,12 +143,17 @@
             color: @navbar-color
         }
 
-        & > li > a {
-            color: @navbar-text-color;
-            .transitions;
+        & > li {
+            display: flex;
+            flex-direction: column;
 
-            &:focus {
-                background-color: white;
+            & > a {
+                color: @navbar-text-color;
+                .transitions;
+
+                &:focus {
+                    background-color: white;
+                }
             }
         }
     }
@@ -156,12 +166,19 @@
         fill: rgba(255,255,255,0.84);
     }
 
-    .search,
-    .search:hover {
+    .search {
         background: @navbar-color;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+
+        &:hover {
+            background: @navbar-color;
+        }
 
         input {
-            margin-top: 8px;
+            height: 2em;
+            .border-radius;
         }
     }
 }
@@ -238,7 +255,7 @@
         }
     }
 }
-@media (max-width:970px) {
+@media (max-width:1050px) {
     .navbar-nav.buttons {
         .transitions;
         margin-top: 0;
@@ -258,7 +275,7 @@
     .navbar.navbar-default {
         .search input,
         .search input:hover {
-            margin-top: 4px;
+            margin: 0;
             .transitions;
         }
     }
