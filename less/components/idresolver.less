@@ -38,7 +38,7 @@
             .dark-text;
             background: @goodcolor;
         }
-         &.DUPLICATE {
+         &.DUPLICATE, &.DUPLICATE .dropdown-toggle {
             text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.2);
             .dark-text;
             background: @needsinputcolor;
@@ -186,7 +186,7 @@
                 cursor: pointer;
             }
 
-            &.selected {
+            &.selected, &.selected .dropdown-toggle{
                 transition: background 0.2s;
                 .button-color;
             }
