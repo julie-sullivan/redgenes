@@ -346,11 +346,17 @@
                             :status             {:status :na}
                             :idresolver-example {:Gene "acr-10, unc-26, hlh-2, WBGene00002299, WBGene00004323, WBGene00002992"}
                             :mine
-                                                {:name    "WormMine"
+                            {:name    "WormMine"
                                                  ;    :url "im-253.wormbase.org/tools/wormmine"
                                                  ;    :service {:root "im-253.wormbase.org/tools/wormmine"}}}
-                                                 :url     "im-258.wormbase.org/tools/wormmine"
-                                                 :service {:root "im-258.wormbase.org/tools/wormmine"}}}
+                             :url     "im-258.wormbase.org/tools/wormmine"
+                             :service {:root "im-258.wormbase.org/tools/wormmine"}}
+                            :default-query-example        {:from   "Gene"
+                                                           :select ["Gene.primaryIdentifier" "Gene.homologues.homologue.primaryIdentifier" "Gene.homologues.homologue.symbol" "Gene.symbol" "Gene.homologues.homologue.organism.name"]
+                                                           :where  [{:path  "Gene.symbol"
+                                                                     :op    "="
+                                                                     :code  "A"
+                                                                     :value "GATA1"}]}}
             :yeastmine      {:id                           :yeastmine
                              :service                      {:root "yeastmine-test-aws.yeastgenome.org/yeastmine-dev/"}
                              :name                         "YeastMine"
