@@ -333,24 +333,24 @@
             ;                                     {:name    "ZebraFishMine"
             ;                                      :url     "www.zebrafishmine.org"
             ;                                      :service {:root "www.zebrafishmine.org"}}}
-            ; :wormmine      {:id                 :wormmine
-            ;                 :service            {:root "intermine.wormbase.org/tools/wormmine"}
-            ;                 :name               "WormMine"
-            ;                 :common             "Worm"
-            ;                 :output?            true
-            ;                 :icon               "icon-worm"
-            ;                 :abbrev             "C. elegans"
-            ;                 :default-organism   "C. elegans"
-            ;                 :default-object-types   [:Gene :Protein]
-            ;                 :default-selected-object-type :Gene
-            ;                 :status             {:status :na}
-            ;                 :idresolver-example {:Gene "acr-10, unc-26, hlh-2, WBGene00002299, WBGene00004323, WBGene00002992"}
-            ;                 :mine
-            ;                                     {:name    "WormMine"
-            ;                                      ;    :url "im-253.wormbase.org/tools/wormmine"
-            ;                                      ;    :service {:root "im-253.wormbase.org/tools/wormmine"}}}
-            ;                                      :url     "intermine.wormbase.org/tools/wormmine"
-            ;                                      :service {:root "intermine.wormbase.org/tools/wormmine"}}}
+            :wormmine      {:id                 :wormmine
+                            :service            {:root "im-258.wormbase.org/tools/wormmine"}
+                            :name               "WormMine"
+                            :common             "Worm"
+                            :output?            true
+                            :icon               "icon-worm"
+                            :abbrev             "C. elegans"
+                            :default-organism   "C. elegans"
+                            :default-object-types   [:Gene :Protein]
+                            :default-selected-object-type :Gene
+                            :status             {:status :na}
+                            :idresolver-example {:Gene "acr-10, unc-26, hlh-2, WBGene00002299, WBGene00004323, WBGene00002992"}
+                            :mine
+                                                {:name    "WormMine"
+                                                 ;    :url "im-253.wormbase.org/tools/wormmine"
+                                                 ;    :service {:root "im-253.wormbase.org/tools/wormmine"}}}
+                                                 :url     "im-258.wormbase.org/tools/wormmine"
+                                                 :service {:root "im-258.wormbase.org/tools/wormmine"}}}
             :yeastmine      {:id                           :yeastmine
                              :service                      {:root "yeastmine-test-aws.yeastgenome.org/yeastmine-dev/"}
                              :name                         "YeastMine"
